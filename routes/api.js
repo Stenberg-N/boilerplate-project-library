@@ -92,7 +92,7 @@ module.exports = function (app) {
         return res.json({ error: 'missing id' });
       }
 
-      const index = books.findIndex(b = b._id === bookid);
+      const index = books.findIndex(b => b._id === bookid);
       if (index === -1) {
         return res.json({ error: 'could not delete book', bookid });
       }
